@@ -198,3 +198,93 @@
 	z-index: 713;
 	min-width: 20%;
 }
+
+.wikiplus-dark-mode() {
+	#Wikiplus-Quickedit {
+		&-Summary-Input {
+			background-color: var(--background-color-base, #202122);
+			color: var(--color-base, #eaecf0);
+			border: 1px solid var(--border-color-base, #a2a9b1);
+		}
+	}
+
+	.Wikiplus-InterBox {
+		background-color: var(--background-color-interactive-subtle, #202122);
+		border-color: var(--border-color-base, #a2a9b1);
+		color: var(--color-base, #eaecf0);
+
+		&-Header {
+			border-bottom-color: var(--color-progressive, #36c);
+		}
+
+		&-Btn {
+			background-color: var(--background-color-interactive, #202122);
+			border-color: var(--border-color-base, #a2a9b1);
+			color: var(--color-base, #eaecf0);
+
+			&:hover {
+				background-color: var(--background-color-interactive--hover, #4d4d4d);
+			}
+		}
+
+		textarea {
+			background-color: var(--background-color-base, #202122);
+			color: var(--color-base, #eaecf0);
+			border-color: var(--border-color-base, #a2a9b1);
+		}
+
+		/* 确保链接颜色可见 */
+		a {
+			color: var(--color-progressive, #36c);
+		}
+	}
+
+	.Wikiplus-Btn {
+		background-color: var(--background-color-interactive, #202122);
+		box-shadow: none;
+		border: 1px solid var(--border-color-base, #a2a9b1);
+
+		a {
+			color: var(--color-base, #eaecf0);
+		}
+	}
+
+	.MoeNotification-notice {
+		background-color: var(--background-color-interactive-subtle, #202122);
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+
+		span {
+			color: var(--color-base, #eaecf0);
+		}
+
+		&-success {
+			background-color: var(--background-color-success-subtle, #0a3311);
+			border-left-color: var(--color-success, #008a00);
+		}
+
+		&-warning {
+			background-color: var(--background-color-warning-subtle, #332700);
+			border-left-color: var(--color-warning, #f4bd00);
+			span {
+				color: var(--color-base, #eaecf0);
+			}
+		}
+
+		&-error {
+			background-color: var(--background-color-error-subtle, #330502);
+			border-left-color: var(--color-error, #b00e06);
+		}
+	}
+}
+
+// Dark mode / Night theme support
+.client-darkmode,
+html.skin-theme-clientpref-night {
+	.wikiplus-dark-mode();
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	html.skin-theme-clientpref-os {
+		.wikiplus-dark-mode();
+	}
+}

@@ -6,3 +6,19 @@
 div.Wikiplus-InterBox {
 	z-index: 100;
 }
+
+// Dark mode / Night theme support
+.client-darkmode,
+html.skin-theme-clientpref-night {
+	#Wikiplus-CodeMirror {
+		border-color: var(--border-color-base, #a2a9b1);
+	}
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	html.skin-theme-clientpref-os {
+		#Wikiplus-CodeMirror {
+			border-color: var(--border-color-base, #a2a9b1);
+		}
+	}
+}

@@ -1,0 +1,55 @@
+// Dark mode support for DiscussionTools
+
+.discussiontools-dark-mode() {
+	background-color: var(--background-color-base, #202122);
+	color: var(--color-base, #eaecf0);
+
+	.oo-ui-toolbar-bar {
+		background-color: var(--background-color-interactive-subtle, #2a2b2e);
+		color: var(--color-base, #eaecf0);
+		border-bottom-color: var(--border-color-base, #a2a9b1);
+	}
+
+	.ve-ui-surface {
+		border-color: var(--border-color-base, #a2a9b1);
+		color: var(--color-base, #eaecf0);
+		background-color: var(--background-color-interactive-subtle, #2a2b2e);
+	}
+
+	.oo-ui-inputWidget-input {
+		background-color: var(--background-color-base, #202122);
+		color: var(--color-base, #eaecf0);
+
+		&::placeholder {
+			color: var(--color-base--subtle, #72777d);
+		}
+	}
+
+	.oo-ui-buttonElement-button > .oo-ui-labelElement-label {
+		color: var(--color-base, #eaecf0);
+	}
+
+	// 修复按钮图标颜色
+	.oo-ui-iconElement-icon {
+		filter: invert(1);
+	}
+
+	// 修复某些特定的按钮背景
+	.oo-ui-buttonElement-framed > .oo-ui-buttonElement-button {
+		background-color: var(--background-color-interactive-subtle, #2a2b2e);
+		border-color: var(--border-color-base, #a2a9b1);
+	}
+}
+
+.client-darkmode,
+html.skin-theme-clientpref-night {
+	.ext-discussiontools-ui-replyWidget {
+		.discussiontools-dark-mode();
+	}
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	html.skin-theme-clientpref-os .ext-discussiontools-ui-replyWidget {
+		.discussiontools-dark-mode();
+	}
+}
