@@ -60,11 +60,14 @@
 * Edittools-refToolbar[ResourceLoader|actions=edit|default|dependencies=ext.gadget.Util,ext.wikiEditor,mediawiki.jqueryMsg,mediawiki.util,user.options|rights=edit|requiresES6]|Edittools-refToolbar.js|Edittools-refToolbar.css
 * Edittools-vector[ResourceLoader|actions=edit|default|dependencies=ext.gadget.Edittools-customizeToolbar|rights=edit|requiresES6]|Edittools-vector.js
 * Edittools-vplus[ResourceLoader|actions=edit|default|dependencies=ext.gadget.Edittools-customizeToolbar,ext.gadget.i18n|rights=edit|requiresES6]|Edittools-vplus.js
+* InPageEdit[ResourceLoader|rights=skipcaptcha|requiresES6]|InPageEdit.js
 * Navigation_popups[ResourceLoader|dependencies=ext.gadget.i18n,ext.gadget.Util,mediawiki.api,mediawiki.jqueryMsg,mediawiki.user,mediawiki.util,user.options|requiresES6]|Navigation_popups.js|Navigation_popups.css
 * PreviewWithVariant[ResourceLoader|default|dependencies=ext.gadget.i18n,ext.gadget.Util,oojs-ui,oojs-ui-core,user.options|rights=edit|requiresES6]|PreviewWithVariant.js|PreviewWithVariant.css
 * PreviewWithVariant2017[ResourceLoader|default|dependencies=ext.gadget.i18n,ext.gadget.Util,mediawiki.jqueryMsg,oojs-ui,oojs-ui-core,user.options|rights=edit|requiresES6]|PreviewWithVariant2017.js|PreviewWithVariant2017.css
 * QuickImport[ResourceLoader|dependencies=ext.gadget.Toastify,ext.gadget.Util,mediawiki.api,mediawiki.util|rights=import|requiresES6]|QuickImport.js
 * QuickImportAllMedia[ResourceLoader|dependencies=ext.gadget.QuickImport,ext.gadget.Toastify,ext.gadget.Util,mediawiki.api,mediawiki.util|rights=import|requiresES6]|QuickImportAllMedia.js
+* Wikiplus[ResourceLoader|dependencies=ext.gadget.Util,user.options|rights=skipcaptcha|requiresES6]|Wikiplus.js|Wikiplus.css
+* Wikiplus-highlight[ResourceLoader|actions=view|dependencies=ext.gadget.Util,ext.gadget.Wikiplus,user.options|rights=skipcaptcha|requiresES6]|Wikiplus-highlight.js|Wikiplus-highlight.css
 
 == skin ==
 * SkinCitizen[ResourceLoader|default|hidden|skins=citizen|requiresES6]|SkinCitizen.css
